@@ -21,13 +21,43 @@ Projects define their respective entry tasks that should be accomplished before 
 
 ### Serverless
 
-* [Libfabric port for fast function invocations in rFaaS](#libfabric-port-for-fast-function-invocations-in-rFaaS)
+At SPCL, we develop several open-source projects: our benchmarking suite [SeBS](github.com/spcl/serverless-benchmarks),
+a serverless ZooKeeper implementation [FaaSKeeper](github.com/spcl/faaskeeper),
+high-performance and RDMA-based serverless platform [rFaaS](github.com/spcl/rFaaS),
+serverless collectives
 
-#### Libfabric port for fast function invocations in rFaaS
+* [Benchmarking serverless platforms with SeBS](#benchmarking-serverless-platforms-with-sebs)
 
-#### Using FaaSKeeper in Hadoop with Java client library
+#### Benchmarking serverless platforms with SeBS
+* **Description**: SeBS supports automatic benchmarking of serverless functions on AWS Lambda, Azure Functions, Google Cloud Functions, and OpenWhisk. We would like to expand SeBS with support for new platforms, such as Fission, Knative, Cloudflare Workers, etc. The new functionality would integrate the platform-specific interface into SeBS, allowing our experiments to automatically deploy and invoke functions.
+* **Expected outcome**: Adding to SeBS interface to automatically deploy and execute functions on new serverless platforms.
+* **Skills required**: Python, Docker. Experience with Kubernetes would be helpful.
+* **Project size** - 175 hours (medium) or 350 hours (large), depending on the project scope (number of platforms).
+* **Difficulty** - easy.
+* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
+* **Entry task** - contribute a PR to one of the issues marked as "good first issue".
+
+#### New serverless benchmarks in SeBS
+* **Description**: In SeBS, we provide a representative set of functions and we have an ongoing work towards serverless workflows. The serverless field is constantly changing, and new workloads are constantly being implemented. We would like to extend our benchmarking suite with new function candidates, such as utility functions (PDF generation, antivirus scanning) or scientific benchmarks; new invocation types (functions invoked on changes in object storage); and new workflows.
+* **Expected outcome**: Contributing to SeBS new benchmarking functions, triggers, and workloads that succesfully execute on already supported platforms.
+* **Skills required**: Python, Docker. Basic experience with cloud is expected (functions, object storage, databases). Experience with Node.js and Go might be helpful for some of the benchmarks.
+* **Project size** - 175 hours (medium) or 350 hours (large), depending on the project scope (number of benchmarks).
+* **Difficulty** - medium.
+* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
+* **Entry task** - contribute a PR to one of the issues marked as "good first issue".
+
+#### New performance experiments in SeBS
+
+#### Benchmarking serverless applications
+
+#### Libfabric for fast function invocations in rFaaS
+
+#### Using FaaSKeeper in Hadoop
 
 #### Optimized and multi-cloud serverless collectives
+
+#### Bringing shared-memory environments to serverless processes
+
 
 ### Data-Centric Programming
 
