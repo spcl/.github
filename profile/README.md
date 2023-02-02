@@ -3,4 +3,4 @@ The research areas include scalable high-performance networks and protocols, mid
 operating system and runtime systems, parallel programming languages, cloud computing and serverless,
 support, and constructs, storage, and scalable data access.
 
-Check our [Google Summer of Code project ideas!](#gsoc.md)
+Check out our [Google Summer of Code project ideas!](gsoc.md)
