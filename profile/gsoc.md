@@ -23,7 +23,7 @@ Projects define their respective entry tasks that should be accomplished before 
 
 At SPCL, we develop several open-source projects that target Function-as-a-Service (FaaS),
 a new cloud paradigm concerned with writing stateless and _serverless_ functions.
-our benchmarking suite [SeBS](https://github.com/spcl/serverless-benchmarks),
+Our benchmarking suite [SeBS](https://github.com/spcl/serverless-benchmarks),
 a serverless ZooKeeper implementation [FaaSKeeper](https://github.com/spcl/faaskeeper),
 high-performance and RDMA-based serverless platform [rFaaS](https://github.com/spcl/rFaaS),
 a serverless collectives library [FMI](https://github.com/spcl/FMI) for parallel and distributed applications,
@@ -116,7 +116,10 @@ and [Process-as-a-Service (PraaS)](https://github.com/spcl/praas), an enhanced s
 
 ### Data-Centric Programming
 
-Introduction to DaCe
+At SPCL, we develop a programming framework that is geared towards optimizing the data movement behavior of applications, a factor that limits the performance and efficiency of many large, real-world applications.
+[DaCe](https://github.com/spcl/dace), or the Data-Centric Parallel Programming Framework, takes code written in Python and other programming languages, and translates it to highly optimized CPU, GPU, or FPGA programs through the use of a [graphical intermediate program representation](https://spcldace.readthedocs.io/en/latest/sdfg/ir.html#the-language).
+This intermediate program representation exposes where a program moves how much data and allos a programmer to interactively optimize the application by applying simple, pre-defined "transformations" from a library.
+DaCe comes with a Visual Studio Code extension that lets you interact with programs and optimize them. You can see a demonstration of this [here](https://github.com/spcl/dace-vscode).
 
 * [[Radio-DaCe] Data-Centric Frequency Domain Optimizations](#radio-dace-data-centric-frequency-domain-optimizations)
 
@@ -127,7 +130,7 @@ Introduction to DaCe
 * **Project size** - 350 hours (large).
 * **Difficulty** - Hard.
 * **Mentor(s)**: Philipp Schaad (philipp.schaad [at] gmail [.] com), [phschaad @ GitHub](https://github.com/phschaad)
-* **Entry task**: Implement a high-pass filter as a native DaCe library.
+* **Entry task**: Provide a native DaCe library implementation for Scrambler blocks.
 
 ### Project Template
 
