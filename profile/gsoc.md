@@ -122,6 +122,8 @@ This intermediate program representation exposes where a program moves how much 
 DaCe comes with a Visual Studio Code extension that lets you interact with programs and optimize them. You can see a demonstration of this [here](https://github.com/spcl/dace-vscode).
 
 * [[Radio-DaCe] Data-Centric Frequency Domain Optimizations](#radio-dace-data-centric-frequency-domain-optimizations)
+* [[SLEEF in DaCe] Vectorization using SLEEF in DaCe](#sleef-in-dace-vectorization-using-sleef-in-dace)
+* [[Mpi4py in DaCe] Add support for Mpi4py in DaCe](#mpi4py-in-dace-add-support-for-mpi4py-in-dace)
 
 #### [Radio-DaCe] Data-Centric Frequency Domain Optimizations
 * **Description**: [GNU Radio](https://github.com/gnuradio/gnuradio) is a large, open-source software development toolkit that provides signal processing blocks to implement software defined radios. Today, SDRs are being considered in several scenarios, ranging from 5G wireless mobile networks and Cloud Radio Access Networks, to radar communications. To match the real-time constraints typical of such scenarios, SDRs have stringent requirements in terms of throughput and latency. GNU Radio provides a flowgraph-oriented approach and a comprehensive library of processing blocks that can be readily combined to make complex signal processing applications. The goal of this project is to leverage [DaCe](https://spcldace.readthedocs.io/en/latest/) and its optimization potential to significantly improve the efficiency and performance of complex signal processing pipelines defined in GNU Radio.
@@ -131,6 +133,24 @@ DaCe comes with a Visual Studio Code extension that lets you interact with progr
 * **Difficulty** - Hard.
 * **Mentor(s)**: Philipp Schaad (philipp.schaad [at] gmail [.] com), [phschaad @ GitHub](https://github.com/phschaad)
 * **Entry task**: Provide a native DaCe library implementation for Scrambler blocks.
+
+#### [SLEEF in DaCe] Vectorization using SLEEF in DaCe
+* **Description**: Modern processors offer extensive vectorization options. Writing code that can successfully vectorized often involves additional development work targeted towards particular hardware, imposing significant portability and maintainability challenges. [SLEEF](https://github.com/shibatch/sleef) is a library that implements vectorized versions of standard C math functions, providing a simpler and more portable alternative. The goal of this project is to leverage SLEEF to provide efficient vectorization options within the [DaCe](https://spcldace.readthedocs.io/en/latest/) framework. 
+* **Expected outcome**: Implementing SLEEF library node expansions to allow DaCe  to take advantage of the vectorization opportunities that the SLEEF library offers.
+* **Skills required**: Python and C++. Basic experience with performance measurements and statistics is beneficial.
+* **Project size** - 350 hours (large).
+* **Difficulty** - Hard.
+* **Mentor(s)**: Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
+* **Entry task**: Install and run the [NPBench](https://github.com/spcl/npbench) set of benchmarks and run them using DaCe. 
+
+#### [Mpi4py in DaCe] Add support for Mpi4py in DaCe
+* **Description**: The Message Passing Interface (MPI) is the uncontested standard for communication in distributed memory systems. While the MPI standard is focused on the C and Fortran, the main language for high performance computing, an increasing number of scientific applications are written in Python. [Mpi4py](https://github.com/mpi4py/mpi4py/) is a package that offers Python bindings for the MPI standard. The goal of this project is to implement support for mpi4py in the [DaCe](https://spcldace.readthedocs.io/en/latest/) framework. 
+* **Expected outcome**: Add support for the mpi4py syntax in DaCe. 
+* **Skills required**: Python. Basic experience with MPI and performance measurements and statistics is beneficial.
+* **Project size** - 350 hours (large).
+* **Difficulty** - Hard.
+* **Mentor(s)**: Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
+* **Entry task**: Install and run the [NPBench](https://github.com/spcl/npbench) set of benchmarks and run them using DaCe. 
 
 ### Project Template
 
