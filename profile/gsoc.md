@@ -118,12 +118,16 @@ and [Process-as-a-Service (PraaS)](https://github.com/spcl/praas), an enhanced s
 
 Introduction to DaCe
 
-* [Project 1](#project-1)
-* [Project 2](#project-2)
+* [[Radio-DaCe] Data-Centric Frequency Domain Optimizations](#radio-dace-data-centric-frequency-domain-optimizations)
 
-#### Project 1
-
-#### Project 2
+#### [Radio-DaCe] Data-Centric Frequency Domain Optimizations
+* **Description**: [GNU Radio](https://github.com/gnuradio/gnuradio) is a large, open-source software development toolkit that provides signal processing blocks to implement software defined radios. Today, SDRs are being considered in several scenarios, ranging from 5G wireless mobile networks and Cloud Radio Access Networks, to radar communications. To match the real-time constraints typical of such scenarios, SDRs have stringent requirements in terms of throughput and latency. GNU Radio provides a flowgraph-oriented approach and a comprehensive library of processing blocks that can be readily combined to make complex signal processing applications. The goal of this project is to leverage [DaCe](https://spcldace.readthedocs.io/en/latest/) and its optimization potential to significantly improve the efficiency and performance of complex signal processing pipelines defined in GNU Radio.
+* **Expected outcome**: Implementing existing GNU Radio processing blocks as DaCe libraries and constructing an interface to let DaCe call native GNU Radio processing blocks.
+* **Skills required**: Python and C++. Basic experience with performance measurements and statistics is beneficial.
+* **Project size** - 350 hours (large).
+* **Difficulty** - Hard.
+* **Mentor(s)**: Philipp Schaad (philipp.schaad [at] gmail [.] com), [phschaad @ GitHub](https://github.com/phschaad)
+* **Entry task**: Implement a high-pass filter as a native DaCe library.
 
 ### Project Template
 
