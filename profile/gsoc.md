@@ -51,7 +51,7 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 * **Skills required**: Python. Basic experience with performance measurements and statistics is expected.
 * **Project size** - 175 hours (medium) or 350 hours (large), depending on the project scope (number and scope of experiments).
 * **Difficulty** - Medium/Difficult.
-* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
+* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com, [mcopik @ GitHub](https://github.com/mcopik/)), Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
 * **Entry task** - Contribute a PR to one of the issues marked as "good first issue".
 
 #### [SeBS] Benchmarking serverless applications
@@ -60,7 +60,7 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 * **Skills required**: Python, Docker, C++/Go. Basic experience with cloud storage, APIs and RPC will be necessary.
 * **Project size** - 350 hours (large).
 * **Difficulty** - Medium/Difficult.
-* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
+* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com, [mcopik @ GitHub](https://github.com/mcopik/))
 * **Entry task** - Contribute a PR to one of the issues marked as "good first issue".
 
 #### [rFaaS] Libfabric for fast function invocations
@@ -69,7 +69,7 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 * **Skills required**: C++, network programming.
 * **Project size** - 350 hours (large).
 * **Difficulty** - Difficult.
-* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), Marcin Chrapek (marcin.chrapek [at] inf [.] ethz [.] ch).
+* **Mentor** - Marcin Chrapek (marcin.chrapek [at] inf [.] ethz [.] ch), Marcin Copik (mcopik [at] gmail [.] com).
 * **Entry task** - contribute a PR to one of the issues marked as "good first issue".
 
 #### [FaaSKeeper] Using serverless ZooKeeper in Apache projects
@@ -78,7 +78,7 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 * **Skills required**: Python, Java, and basic understanding of ZooKeeper. Experience with cloud REST APIs might be useful.
 * **Project size** - 350 hours (large).
 * **Difficulty** - Medium/Difficult.
-* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
+* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com, [mcopik @ GitHub](https://github.com/mcopik/)), Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
 * **Entry task** - Deploy FaaSKeeper and execute unit tests.
 
 #### [FaaSKeeper] Multi-cloud serverless ZooKeeper
@@ -87,7 +87,7 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 * **Skills required**: Python, basic experience with cloud is expected (functions, object storage, databases). Experience with the Serverless framework or AWS CloudFormation templates will be helpful.
 * **Project size** - 350 hours (large).
 * **Difficulty** - Medium/Difficult.
-* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
+* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/), Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
 * **Entry task** - Deploy FaaSKeeper and execute unit tests.
 
 #### [FMI] Optimized and multi-cloud serverless collectives
@@ -96,7 +96,7 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 * **Skills required**: C++, network programming. Basic experience with cloud (functions, object storage, databases) and with parallel algorithms is expected.
 * **Project size** - 350 hours (large).
 * **Difficulty** - Medium/Difficult.
-* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
+* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/), Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
 * **Entry task** - Implement and deploy simple serverless application using FMI.
 
 ### Data-Centric Programming
