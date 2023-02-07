@@ -131,7 +131,7 @@ DaCe comes with a Visual Studio Code extension that lets you interact with progr
 * **Skills required**: Python and C++. Basic experience with performance measurements and statistics is beneficial.
 * **Project size** - 350 hours (large).
 * **Difficulty** - Difficult.
-* **Mentor(s)**: Philipp Schaad (philipp.schaad [at] gmail [.] com), [phschaad @ GitHub](https://github.com/phschaad)
+* **Mentor(s)**: Philipp Schaad (philipp.schaad [at] inf.ethz [.] ch), [phschaad @ GitHub](https://github.com/phschaad)
 * **Entry task**: Create a simple DaCe program through Python and run it.
 
 #### [SLEEF in DaCe] Vectorization using SLEEF in DaCe
