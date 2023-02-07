@@ -1,7 +1,7 @@
 
 # Google Summer of Code (GSoC) 2023
 
-The SPCL group will apply as an organization to the Google Summer of Code (GSoC) program
+The SPCL group applied as an organization to the Google Summer of Code (GSoC) program
 for our open-source projects in data-centric programming and serverless computing.
 You can find here student project proposals, advice on applying, and introductions to
 each project to start using our software.
@@ -9,6 +9,8 @@ each project to start using our software.
 Learn more on how to apply, write your proposal from the [contributor guideline](gsoc_application.md).
 
 ## Project Ideas
+
+Our project ideas are grouped into two categories: [**serverless computing**](#serverless) and [**data-centric programming framework**](#data-centric-programming).
 
 ### Serverless
 
