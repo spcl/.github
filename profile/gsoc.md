@@ -61,7 +61,7 @@ and [Process-as-a-Service (PraaS)](https://github.com/spcl/praas), an enhanced s
 * **Expected outcome**: Contributing to SeBS complete, end-to-end performance experiments.
 * **Skills required**: Python. Basic experience with performance measurements and statistics is expected.
 * **Project size** - 175 hours (medium) or 350 hours (large), depending on the project scope (number and scope of experiments).
-* **Difficulty** - Medium/Hard.
+* **Difficulty** - Medium/Difficult.
 * **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
 * **Entry task** - Contribute a PR to one of the issues marked as "good first issue".
 
@@ -70,7 +70,7 @@ and [Process-as-a-Service (PraaS)](https://github.com/spcl/praas), an enhanced s
 * **Expected outcome**: Contributing to SeBS two-three benchmarks covering the open-source applications, with documentation, automatic invocation, and performance metrics. 
 * **Skills required**: Python, Docker, C++/Go. Basic experience with cloud storage, APIs and RPC will be necessary.
 * **Project size** - 350 hours (large).
-* **Difficulty** - Medium/Hard.
+* **Difficulty** - Medium/Difficult.
 * **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
 * **Entry task** - Contribute a PR to one of the issues marked as "good first issue".
 
@@ -79,7 +79,7 @@ and [Process-as-a-Service (PraaS)](https://github.com/spcl/praas), an enhanced s
 * **Expected outcome**: A pull request with a refactored implementation of libfabric port, including configuration for endpoints such as TCP, ibverbs, and AWS EFA.
 * **Skills required**: C++, network programming.
 * **Project size** - 350 hours (large).
-* **Difficulty** - Hard.
+* **Difficulty** - Difficult.
 * **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), Marcin Chrapek (marcin.chrapek [at] inf [.] ethz [.] ch).
 * **Entry task** - contribute a PR to one of the issues marked as "good first issue".
 
@@ -88,7 +88,7 @@ and [Process-as-a-Service (PraaS)](https://github.com/spcl/praas), an enhanced s
 * **Expected outcome**: New client library exposed to Java applications, implementation of missing API calls (if needed), and demonstration of succesful integration into a larger open-source application using ZooKeeper.
 * **Skills required**: Python, Java, and basic understanding of ZooKeeper. Experience with cloud REST APIs might be useful.
 * **Project size** - 350 hours (large).
-* **Difficulty** - Medium/Hard.
+* **Difficulty** - Medium/Difficult.
 * **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
 * **Entry task** - Deploy FaaSKeeper and execute unit tests.
 
@@ -97,7 +97,7 @@ and [Process-as-a-Service (PraaS)](https://github.com/spcl/praas), an enhanced s
 * **Expected outcome**: Contributing a port of existing implementation the the Azure and Google clouds with benchmarks for latency, througput, batching and storage systems.
 * **Skills required**: Python, basic experience with cloud is expected (functions, object storage, databases). Experience with the Serverless framework or AWS CloudFormation templates will be helpful.
 * **Project size** - 350 hours (large).
-* **Difficulty** - Medium/Hard.
+* **Difficulty** - Medium/Difficult.
 * **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
 * **Entry task** - Deploy FaaSKeeper and execute unit tests.
 
@@ -106,7 +106,7 @@ and [Process-as-a-Service (PraaS)](https://github.com/spcl/praas), an enhanced s
 * **Expected outcome**: Contributing a port of existing implementation to another cloud, and implementing selected optimizations.
 * **Skills required**: C++, network programming, basic experience with cloud is expected (functions, object storage, databases).
 * **Project size** - 350 hours (large).
-* **Difficulty** - Medium/Hard.
+* **Difficulty** - Medium/Difficult.
 * **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
 * **Entry task** - Implement and deploy simple serverless application using FMI.
 
@@ -130,7 +130,7 @@ DaCe comes with a Visual Studio Code extension that lets you interact with progr
 * **Expected outcome**: Implementing existing GNU Radio processing blocks as DaCe libraries and constructing an interface to let DaCe call native GNU Radio processing blocks.
 * **Skills required**: Python and C++. Basic experience with performance measurements and statistics is beneficial.
 * **Project size** - 350 hours (large).
-* **Difficulty** - Hard.
+* **Difficulty** - Difficult.
 * **Mentor(s)**: Philipp Schaad (philipp.schaad [at] gmail [.] com), [phschaad @ GitHub](https://github.com/phschaad)
 * **Entry task**: Provide a native DaCe library implementation for Scrambler blocks.
 
@@ -139,7 +139,7 @@ DaCe comes with a Visual Studio Code extension that lets you interact with progr
 * **Expected outcome**: Implementing SLEEF library node expansions to allow DaCe  to take advantage of the vectorization opportunities that the SLEEF library offers.
 * **Skills required**: Python and C++. Basic experience with performance measurements and statistics is beneficial.
 * **Project size** - 350 hours (large).
-* **Difficulty** - Hard.
+* **Difficulty** - Difficult.
 * **Mentor(s)**: Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
 * **Entry task**: Install and run the [NPBench](https://github.com/spcl/npbench) set of benchmarks and run them using DaCe. 
 
@@ -148,7 +148,7 @@ DaCe comes with a Visual Studio Code extension that lets you interact with progr
 * **Expected outcome**: Add support for the mpi4py syntax in DaCe. 
 * **Skills required**: Python. Basic experience with MPI and performance measurements and statistics is beneficial.
 * **Project size** - 350 hours (large).
-* **Difficulty** - Hard.
+* **Difficulty** - Difficult.
 * **Mentor(s)**: Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
 * **Entry task**: Install and run the [NPBench](https://github.com/spcl/npbench) set of benchmarks and run them using DaCe. 
 
