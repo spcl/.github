@@ -139,7 +139,7 @@ DaCe comes with a Visual Studio Code extension that lets you interact with progr
 * **Expected outcome**: Implementing SLEEF library node expansions to allow DaCe  to take advantage of the vectorization opportunities that the SLEEF library offers.
 * **Skills required**: Python and C++. Basic experience with performance measurements and statistics is beneficial.
 * **Project size** - 350 hours (large).
-* **Difficulty** - Difficult.
+* **Difficulty** - Medium.
 * **Mentor(s)**: Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
 * **Entry task**: Install and run the [NPBench](https://github.com/spcl/npbench) set of benchmarks and run them using DaCe. 
 
