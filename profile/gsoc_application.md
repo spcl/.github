@@ -35,8 +35,6 @@ It should include your personal details, information on your current degree (uni
 
 Please include your availability: how much time do you plan to spend on your GSoC project? Are there other factors that might impact your availability, such as part-time work, exams, summer school, university courses?
 
-### Skills
-
 ### Experience
 
 Please summarize and describe your education and experience, including skills acquired at the university and practical experience, such as large university projects, internships, jobs, open-source contributions, publications, etc.
