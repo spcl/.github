@@ -3,7 +3,9 @@ Google Summer of Code is a competitive program where many students present inter
 
 ### Communicate with mentors
 
-You should get in touch with mentors that have been assigned to a specific project and discuss the project ideas with them. To contact mentors, please use the provided email address or reach out to them on [our Mattermost server.](https://chat.spcl.inf.ethz.ch/signup_user_complete/?id=6iq1jfforpf9tyhdmffi57zpxw). All students are expected to conduct initial research into the topic, evaluate requirements, and discuss potential solutions with mentors. Active collaboration before the application is vital to a successful project proposal.
+You should get in touch with mentors that have been assigned to a specific project and discuss the project ideas with them. To contact mentors, please use the provided email address or reach out to them on [our Mattermost server.](https://chat.spcl.inf.ethz.ch/signup_user_complete/?id=6iq1jfforpf9tyhdmffi57zpxw). After creating the account, please join the `Google Summer of Code` channel to contact mentors and discuss projects.
+
+All students are expected to conduct initial research into the topic, evaluate requirements, and discuss potential solutions with mentors. Active collaboration before the application is vital to a successful project proposal.
 
 ### Research the problem
 
