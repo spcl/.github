@@ -6,7 +6,7 @@ for our open-source projects in data-centric programming and serverless computin
 You can find here student project proposals, advice on applying, and introductions to
 each project to start using our software.
 
-Learn more on how to apply, write your proposal from the [contributor guideline](gsoc_application.md).
+Learn more on how to apply, write your proposal from the [contributor guideline](gsoc_application.md). Get get in touch with mentors and discuss the project ideas using the provided email address and reach out to them on [our Mattermost server](https://chat.spcl.inf.ethz.ch/signup_user_complete/?id=6iq1jfforpf9tyhdmffi57zpxw) - join the public GSoC channel.
 
 ## Project Ideas
 
