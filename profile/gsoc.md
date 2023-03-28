@@ -25,6 +25,7 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 * [[SeBS] Support for new performance experiments](#sebs-new-performance-experiments)
 * [[SeBS] Adding serverless applications as benchmarks](#sebs-benchmarking-serverless-applications)
 * [[rFaaS] Libfabric for fast function invocations](#rfaas-libfabric-for-fast-function-invocations)
+* [[rFaaS] Serverless MPI functions](#rfaas-serverless-mpi-functions)
 * [[FaaSKeeper] Using serverless ZooKeeper in Apache projects](#faaskeeper-using-serverless-zookeeper-in-apache-projects)
 * [[FaaSKeeper] Multi-cloud serverless ZooKeeper](#faaskeeper-multi-cloud-serverless-zookeeper)
 * [[FMI] Optimized and multi-cloud serverless collectives](#fmi-optimized-and-multi-cloud-serverless-collectives)
@@ -63,8 +64,17 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 * **Project size** - 350 hours (large).
 * **Difficulty** - Difficult.
 * **Mentor** - Marcin Chrapek (marcin.chrapek [at] inf [.] ethz [.] ch), Marcin Copik (mcopik [at] gmail [.] com).
-* **Entry task** - contribute a PR to one of the issues marked as "good first issue".
+* **Entry task** - contribute a PR to one of the issues marked as "good first issue" or build rFaaS and test it with SoftRoCE.
 
+#### [rFaaS] Serverless MPI functions
+* **Description**: The HPC community has been working on supporting malleable and evolving applications in MPI, i.e., applications that require dynamic adjusting of the number of workers. Examples include Flex-MPI and invasive MPI. Serverless functions could be a perfect runtime for such a task - they can be allocated and removed on-the-fly, aiding the elasticity of MPI applications. However,  MPI runtimes are tightly coupled with batch systems, and reimplementing the MPI interface with a new serverless-aware library would prevent us from using optimized communication methods. Instead, in this project, we want to investigate an alternative approach - analyze the process runtime of an open-source MPI implementation, such as the PMI component of OpenMPI. We want to replace the process management with an experimental prototype that will allocate MPI processes as rFaaS functions. With initialized processes and communication, functions can execute MPI code and benefit from tuned implementations of MPI collectives.
+* **Expected outcome**: A prototype implementation that can execute a simple MPI application by allocating MPI processes as rFaaS functions.
+* **Skills required**: C++, HPC, a bit of hacking to get into OpenMPI/MPICH internals.
+* **Project size** - 350 hours (large).
+* **Difficulty** - Difficult.
+* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com).
+* **Entry task** - build rFaaS and test it with SoftRoCE.
+*
 #### [FaaSKeeper] Using serverless ZooKeeper in Apache projects
 * **Description**: FaaSKeeper implements standard ZooKeeper functionalities and includes a new client for Python applications. ZooKeeper has been used by many Java and Scala applications in the Apache project, e.g., Kafka and HBase. Since they use a limited set of features that might be covered by FaaSKeeper, demonstrating the integration of our function-based implementation would be a significant improvement to the project. The goal of the project would be to identify a relevant project(s) that could use FaaSKeeper instead of ZooKeeper, define the set of API calls that have to be implemented, and propose a new Java client library that offloads ZooKeeper calls to the REST cloud API instead of using ZooKeeper protocol.
 * **Expected outcome**: New client library exposed to Java applications, implementation of missing API calls (if needed), and demonstration of succesful integration into a larger open-source application using ZooKeeper.
