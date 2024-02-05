@@ -1,5 +1,5 @@
 
-# Google Summer of Code (GSoC) 2023
+# Google Summer of Code (GSoC) 2024
 
 The SPCL group applied as an organization to the Google Summer of Code (GSoC) program
 for our open-source projects in data-centric programming and serverless computing.
@@ -24,10 +24,8 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 * [[SeBS] Adding new serverless benchmarks](#sebs-new-serverless-benchmarks)
 * [[SeBS] Support for new performance experiments](#sebs-new-performance-experiments)
 * [[SeBS] Adding serverless applications as benchmarks](#sebs-benchmarking-serverless-applications)
-* [[rFaaS] Libfabric for fast function invocations](#rfaas-libfabric-for-fast-function-invocations)
 * [[rFaaS] Serverless MPI functions](#rfaas-serverless-mpi-functions)
 * [[FaaSKeeper] Using serverless ZooKeeper in Apache projects](#faaskeeper-using-serverless-zookeeper-in-apache-projects)
-* [[FaaSKeeper] Multi-cloud serverless ZooKeeper](#faaskeeper-multi-cloud-serverless-zookeeper)
 * [[FMI] Optimized and multi-cloud serverless collectives](#fmi-optimized-and-multi-cloud-serverless-collectives)
 
 #### [SeBS] New serverless benchmarks
@@ -57,15 +55,6 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 * **Mentor** - Marcin Copik (mcopik [at] gmail [.] com, [mcopik @ GitHub](https://github.com/mcopik/))
 * **Entry task** - Contribute a PR to one of the issues marked as "good first issue".
 
-#### [rFaaS] Libfabric for fast function invocations
-* **Description**: rFaaS implements function invocations with single-digit microsecond latency by using _ibverbs_ for communication over RDMA-capable networks. To support networks other than InfiniBand and RoCE, we started an implementation that uses _libfabric_, a higher-level networking library, and targets the Cray GNI network communication. The project's primary goal would be to refactor the existing codebase into two compatible implementations that use either _ibverbs_ or _libfabric_. However, not all users of rFaaS have access to a such network device. Thus, the second goal is to support a larger variety of networks by tuning the libfabric configuration for protocols such as TCP or AWS EFA.
-* **Expected outcome**: A pull request with a refactored implementation of libfabric port, including configuration for endpoints such as TCP, ibverbs, and AWS EFA.
-* **Skills required**: C++, network programming.
-* **Project size** - 350 hours (large).
-* **Difficulty** - Difficult.
-* **Mentor** - Marcin Chrapek (marcin.chrapek [at] inf [.] ethz [.] ch), Marcin Copik (mcopik [at] gmail [.] com).
-* **Entry task** - contribute a PR to one of the issues marked as "good first issue" or build rFaaS and test it with SoftRoCE.
-
 #### [rFaaS] Serverless MPI functions
 * **Description**: The HPC community has been working on supporting malleable and evolving applications in MPI, i.e., applications that require dynamic adjusting of the number of workers. Examples include Flex-MPI and invasive MPI. Serverless functions could be a perfect runtime for such a task - they can be allocated and removed on-the-fly, aiding the elasticity of MPI applications. However,  MPI runtimes are tightly coupled with batch systems, and reimplementing the MPI interface with a new serverless-aware library would prevent us from using optimized communication methods. Instead, in this project, we want to investigate an alternative approach - analyze the process runtime of an open-source MPI implementation, such as the PMI component of OpenMPI. We want to replace the process management with an experimental prototype that will allocate MPI processes as rFaaS functions. With initialized processes and communication, functions can execute MPI code and benefit from tuned implementations of MPI collectives.
 * **Expected outcome**: A prototype implementation that can execute a simple MPI application by allocating MPI processes as rFaaS functions.
@@ -84,15 +73,6 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 * **Mentor** - Marcin Copik (mcopik [at] gmail [.] com, [mcopik @ GitHub](https://github.com/mcopik/)), Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
 * **Entry task** - Deploy FaaSKeeper and execute unit tests.
 
-#### [FaaSKeeper] Multi-cloud serverless ZooKeeper
-* **Description**: The primary implementation of FaaSKeeper targets the AWS cloud. However, the system does not rely on a single cloud system, and its design is cloud-agnostic (please check the paper preprint for details). The project's goal would be to port existing function code into Azure and Google clouds by finding corresponding storage, queue, and database services, verifying their limitations and capabilities, and evaluating the performance of new implementations.
-* **Expected outcome**: Contributing a port of existing implementation the the Azure and Google clouds with benchmarks for latency, througput, batching and storage systems.
-* **Skills required**: Python, basic experience with cloud is expected (functions, object storage, databases). Experience with the Serverless framework or AWS CloudFormation templates will be helpful.
-* **Project size** - 350 hours (large).
-* **Difficulty** - Medium/Difficult.
-* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/), Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
-* **Entry task** - Deploy FaaSKeeper and execute unit tests.
-
 #### [FMI] Optimized and multi-cloud serverless collectives
 * **Description**: FMI brings collective operations and point-to-point communication to serverless functions, using cloud storage and TCP connections with NAT hole punching. However, the primary implementation of FMI targets the AWS cloud. The first goal of the project would be porting to a new cloud, such as Google Cloud Functions. The second goal would be optimizing communication. For example, multi-core functions on AWS Lambda allow for the execution of multiple function workers as threads. There, we can use the local shared memory environment for communication. Another example would be implementing variants of standard and proven collective communication algorithms that target communication on very small (latency-bound) and very-large messages (bandwidth-bound). [This paper](https://web.cels.anl.gov/~thakur/papers/ijhpca-coll.pdf) is a good starting point on various communication algorithms.
 * **Expected outcome**: Contributing a port of existing implementation to another cloud, and implementing selected optimizations.
@@ -109,18 +89,7 @@ At SPCL, we develop a programming framework that is geared towards optimizing th
 This intermediate program representation exposes where a program moves how much data and allos a programmer to interactively optimize the application by applying simple, pre-defined "transformations" from a library.
 DaCe comes with a Visual Studio Code extension that lets you interact with programs and optimize them. You can see a demonstration of this [here](https://github.com/spcl/dace-vscode).
 
-* [[Radio-DaCe] Data-Centric Frequency Domain Optimizations](#radio-dace-data-centric-frequency-domain-optimizations)
 * [[SLEEF in DaCe] Vectorization using SLEEF in DaCe](#sleef-in-dace-vectorization-using-sleef-in-dace)
-* [[Mpi4py in DaCe] Add support for Mpi4py in DaCe](#mpi4py-in-dace-add-support-for-mpi4py-in-dace)
-
-#### [Radio-DaCe] Data-Centric Frequency Domain Optimizations
-* **Description**: [GNU Radio](https://github.com/gnuradio/gnuradio) is a large, open-source software development toolkit that provides signal processing blocks to implement software defined radios. Today, SDRs are being considered in several scenarios, ranging from 5G wireless mobile networks and Cloud Radio Access Networks, to radar communications. To match the real-time constraints typical of such scenarios, SDRs have stringent requirements in terms of throughput and latency. GNU Radio provides a flowgraph-oriented approach and a comprehensive library of processing blocks that can be readily combined to make complex signal processing applications. The goal of this project is to leverage [DaCe](https://spcldace.readthedocs.io/en/latest/) and its optimization potential to significantly improve the efficiency and performance of complex signal processing pipelines defined in GNU Radio by, among other things, leveraging more degrees of parallelism.
-* **Expected outcome**: Implementing existing GNU Radio processing blocks as DaCe libraries and constructing an interface to let DaCe call native GNU Radio processing blocks.
-* **Skills required**: Python and C++. Basic experience with performance measurements and statistics is beneficial.
-* **Project size** - 350 hours (large).
-* **Difficulty** - Difficult.
-* **Mentor(s)**: Philipp Schaad (philipp.schaad [at] inf.ethz [.] ch), [phschaad @ GitHub](https://github.com/phschaad), Tiziano De Matteis (tiziano.dematteis [at] inf.ethz [.] ch)
-* **Entry task**: Create a simple DaCe program through Python and run it.
 
 #### [SLEEF in DaCe] Vectorization using SLEEF in DaCe
 * **Description**: Modern processors offer extensive vectorization options. Writing code that can successfully vectorized often involves additional development work targeted towards particular hardware, imposing significant portability and maintainability challenges. [SLEEF](https://github.com/shibatch/sleef) is a library that implements vectorized versions of standard C math functions, providing a simpler and more portable alternative. The goal of this project is to leverage SLEEF to provide efficient vectorization options within the [DaCe](https://spcldace.readthedocs.io/en/latest/) framework. 
