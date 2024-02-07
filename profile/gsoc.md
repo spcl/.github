@@ -21,12 +21,23 @@ We published and develop a serverless ZooKeeper implementation [FaaSKeeper](http
 a high-performance and RDMA-based serverless platform [rFaaS](https://github.com/spcl/rFaaS),
 and a serverless collectives library [FMI](https://github.com/spcl/FMI) for parallel and distributed applications.
 
+* [[SeBS] Keeping up with clouds](#sebs-keeping-up-with-the-clouds)
 * [[SeBS] Adding new serverless benchmarks](#sebs-new-serverless-benchmarks)
 * [[SeBS] Support for new performance experiments](#sebs-new-performance-experiments)
 * [[SeBS] Adding serverless applications as benchmarks](#sebs-benchmarking-serverless-applications)
 * [[rFaaS] Serverless MPI functions](#rfaas-serverless-mpi-functions)
 * [[FaaSKeeper] Using serverless ZooKeeper in Apache projects](#faaskeeper-using-serverless-zookeeper-in-apache-projects)
 * [[FMI] Optimized and multi-cloud serverless collectives](#fmi-optimized-and-multi-cloud-serverless-collectives)
+
+
+#### [SeBS] Keeping up with the clouds
+* **Description**: In SeBS, we support AWS Lambda, Google Cloud Functions, Azure Functions, and OpenWhisk. Since the original release of SeBS, we have seen a lot of changes: growing popularity of ARM functions on AWS, new Azure Functions runtime versions, Google Cloud Functions version 2, and Knative becoming one of the most popular open-source serverless platforms. Adding support for new runtimes and platforms would help SeBS stay usable and competitive in the changing world of clouds.
+* **Expected outcome**: Contributing to SeBS support for new runtimes and platforms, ensuring that existing workloads work correctly there.
+* **Skills required**: Python, Docker. Basic experience with cloud is expected (functions, object storage, databases). Experience with Node.js be helpful for some of the benchmarks.
+* **Project size** - 90 hours (small) or 175 hours (medium), depending on the project scope. 
+* **Difficulty** - Easy/Medium.
+* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
+* **Entry task** - Contribute a PR to one of the issues marked as "good first issue".
 
 #### [SeBS] New serverless benchmarks
 * **Description**: In SeBS, we provide a representative set of functions, and we have developed a set of serverless workflows that will be included in the upcoming release. However, the serverless field is constantly changing, and new types of applications are being "FaaS-ified". Therefore, we would like to extend our benchmarking suite with new function candidates, such as utility functions (PDF generation, antivirus scanning) or scientific benchmarks, new invocation types (functions invoked on changes in object storage), and new workflows.
@@ -36,7 +47,7 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 * **Difficulty** - Easy/Medium.
 * **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
 * **Entry task** - Contribute a PR to one of the issues marked as "good first issue".
-
+ 
 #### [SeBS] New performance experiments
 * **Description**: SeBS includes automatic experiments that evaluate specific performance features of serverless platforms, such as latency and cost of function invocations or invocation overheads. The goal of the project would be to add new experiments that use microbenchmarks and serverless functions to evaluate interesting metrics and characteristics of a serverless runtime. An example would be a flexible and configurable workload generator, based on JMeter or a similar system, to measure throughput, scalability, and the elasticity of the platform when varying workloads. Another goal would be to extend existing trigger types with storage and queues to understand the latency and throughput of synchronous and asynchronous invocations and measure the latency of pipeline invocations. Do you have another idea for an interesting experiment? Let us know!
 * **Expected outcome**: Contributing to SeBS complete, end-to-end performance experiments.
