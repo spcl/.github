@@ -22,6 +22,7 @@ a high-performance and RDMA-based serverless platform [rFaaS](https://github.com
 and a serverless collectives library [FMI](https://github.com/spcl/FMI) for parallel and distributed applications.
 
 * [[SeBS] Keeping up with clouds](#sebs-keeping-up-with-the-clouds)
+* [[SeBS] Supporting new serverless platforms](#sebs-supporting-new-serverless-platforms)
 * [[SeBS] Adding new serverless benchmarks](#sebs-new-serverless-benchmarks)
 * [[SeBS] Support for new performance experiments](#sebs-new-performance-experiments)
 * [[SeBS] Adding serverless applications as benchmarks](#sebs-benchmarking-serverless-applications)
@@ -33,6 +34,15 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 #### [SeBS] Keeping up with the clouds
 * **Description**: In SeBS, we support AWS Lambda, Google Cloud Functions, Azure Functions, and OpenWhisk. Since the original release of SeBS, we have seen a lot of changes: growing popularity of ARM functions on AWS, new Azure Functions runtime versions, Google Cloud Functions version 2, and Knative becoming one of the most popular open-source serverless platforms. Adding support for new runtimes and platforms would help SeBS stay usable and competitive in the changing world of clouds.
 * **Expected outcome**: Contributing to SeBS support for new runtimes and platforms, ensuring that existing workloads work correctly there.
+* **Skills required**: Python, Docker. Basic experience with cloud is expected (functions, object storage, databases). Experience with Node.js be helpful for some of the benchmarks.
+* **Project size** - 90 hours (small) or 175 hours (medium), depending on the project scope. 
+* **Difficulty** - Easy/Medium.
+* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
+* **Entry task** - Contribute a PR to one of the issues marked as "good first issue".
+
+#### [SeBS] Supporting new serverless platforms
+* **Description**: In SeBS, we support AWS Lambda, Google Cloud Functions, Azure Functions, and OpenWhisk. We would like to extend the support with new serverless platforms, particularly focusing on the quickly growing KNative project. This requires adding new benchmark wrappers, packaging code in the container format expected by Knative, and interfacing with their metrics system to gather measurement data. In addition, we want to complete the support for the Fission platform (see issue #61).
+* **Expected outcome**: Contributing to SeBS support for new open-source platforms, ensuring that existing workloads work correctly there.
 * **Skills required**: Python, Docker. Basic experience with cloud is expected (functions, object storage, databases). Experience with Node.js be helpful for some of the benchmarks.
 * **Project size** - 90 hours (small) or 175 hours (medium), depending on the project scope. 
 * **Difficulty** - Easy/Medium.
