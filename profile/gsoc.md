@@ -21,6 +21,7 @@ We published and develop a serverless ZooKeeper implementation [FaaSKeeper](http
 a high-performance and RDMA-based serverless platform [rFaaS](https://github.com/spcl/rFaaS),
 and a serverless collectives library [FMI](https://github.com/spcl/FMI) for parallel and distributed applications.
 
+* [[SeBS] Website for experimental results](#sebs-website-for-experimental-results)
 * [[SeBS] Keeping up with clouds](#sebs-keeping-up-with-the-clouds)
 * [[SeBS] Supporting new serverless platforms](#sebs-supporting-new-serverless-platforms)
 * [[SeBS] Adding new serverless benchmarks](#sebs-new-serverless-benchmarks)
@@ -30,6 +31,14 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 * [[FaaSKeeper] Using serverless ZooKeeper in Apache projects](#faaskeeper-using-serverless-zookeeper-in-apache-projects)
 * [[FMI] Optimized and multi-cloud serverless collectives](#fmi-optimized-and-multi-cloud-serverless-collectives)
 
+#### [SeBS] Website for experimental results
+* **Description**: SeBS allows the generation of many experimental results in performance and container management, and soon, we will have full support for workflows and communication benchmarks. We are also working on gathering long-term performance measurements for large serverless applications. However, we are missing a good website interface to present these performance measurements to the users. In this project, we want to deploy the first version of a website that can display results obtained with SeBS. The website should use an existing library/solution to dynamically create plots and change between scenarios (language, memory size, experiment, platform). The website should pull data from a predefined place, e.g., a GitHub repository. Ideally, the plots should be interactive, e.g., displaying data point values, zooming in/out, and removing certain features from the plot (e.g., displaying only selected memory configurations). The website should be extensible to allow more complex datasets in the future, e.g., supporting large applications that consist of many functions. A website that we can host on github.io would be a huge plus (restrictions on the dynamic content, something like Hugo or Jekyll).
+* **Expected outcome**: Contributing to SeBS support for new runtimes and platforms, ensuring that existing workloads work correctly there.
+* **Skills required**: frontend and backend development.
+* **Project size** - 175 hours (medium) or 350 hours (large), depending on the project scope (number of features for the website). 
+* **Difficulty** - Medium.
+* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
+* **Entry task** - Create a convincing idea draft for the website or contribute a PR to one of the issues marked as "good first issue".
 
 #### [SeBS] Keeping up with the clouds
 * **Description**: In SeBS, we support AWS Lambda, Google Cloud Functions, Azure Functions, and OpenWhisk. Since the original release of SeBS, we have seen a lot of changes: growing popularity of ARM functions on AWS, new Azure Functions runtime versions, Google Cloud Functions version 2, and Knative becoming one of the most popular open-source serverless platforms. Furthermore, SeBS lacks support for deploying functions as containers instead of code packages. Adding support for new runtimes and platforms would help SeBS stay usable and competitive in the changing world of clouds.
