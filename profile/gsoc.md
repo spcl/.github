@@ -32,7 +32,7 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 
 
 #### [SeBS] Keeping up with the clouds
-* **Description**: In SeBS, we support AWS Lambda, Google Cloud Functions, Azure Functions, and OpenWhisk. Since the original release of SeBS, we have seen a lot of changes: growing popularity of ARM functions on AWS, new Azure Functions runtime versions, Google Cloud Functions version 2, and Knative becoming one of the most popular open-source serverless platforms. Adding support for new runtimes and platforms would help SeBS stay usable and competitive in the changing world of clouds.
+* **Description**: In SeBS, we support AWS Lambda, Google Cloud Functions, Azure Functions, and OpenWhisk. Since the original release of SeBS, we have seen a lot of changes: growing popularity of ARM functions on AWS, new Azure Functions runtime versions, Google Cloud Functions version 2, and Knative becoming one of the most popular open-source serverless platforms. Furthermore, SeBS lacks support for deploying functions as containers instead of code packages. Adding support for new runtimes and platforms would help SeBS stay usable and competitive in the changing world of clouds.
 * **Expected outcome**: Contributing to SeBS support for new runtimes and platforms, ensuring that existing workloads work correctly there.
 * **Skills required**: Python, Docker. Basic experience with cloud is expected (functions, object storage, databases). Experience with Node.js be helpful for some of the benchmarks.
 * **Project size** - 90 hours (small) or 175 hours (medium), depending on the project scope. 
