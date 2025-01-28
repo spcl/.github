@@ -114,16 +114,17 @@ and a serverless collectives library [FMI](https://github.com/spcl/FMI) for para
 
 ### Data-Centric Programming
 
-At SPCL, we develop a programming framework that is geared towards optimizing the data movement behavior of applications, a factor that limits the performance and efficiency of many large, real-world applications.
-[DaCe](https://github.com/spcl/dace), or the Data-Centric Parallel Programming Framework, takes code written in Python and other programming languages, and translates it to highly optimized CPU, GPU, or FPGA programs through the use of a [graphical intermediate program representation](https://spcldace.readthedocs.io/en/latest/sdfg/ir.html#the-language).
-This intermediate program representation exposes where a program moves how much data and allos a programmer to interactively optimize the application by applying simple, pre-defined "transformations" from a library.
+[DaCe](https://github.com/spcl/dace), or the Data-Centric Parallel Programming Framework, is a framework geared towards optimizing the data movement behavior of applications, a factor that limits the performance and efficiency of many large, real-world applications. The framework started at SPCL and is now being actively developed by multiple research groups around the world. 
+DaCe takes code written in Python and other programming languages, and translates it to highly optimized CPU, GPU, or FPGA programs through the use of a [graphical intermediate program representation](https://spcldace.readthedocs.io/en/latest/sdfg/ir.html#the-language).
+This intermediate representation exposes which and how much data is moved in a program, and allows a programmer to interactively optimize the application by applying simple, pre-defined transformations to its dataflow.
 DaCe comes with a Visual Studio Code extension that lets you interact with programs and optimize them. You can see a demonstration of this [here](https://github.com/spcl/dace-vscode).
+DaCe is used in a variety of applications, including weather and climate prediction models, quantum transport simulations, and fast machine learning operators.
 
-* [[SLEEF in DaCe] Vectorization using SLEEF in DaCe](#sleef-in-dace-vectorization-using-sleef-in-dace)
+* [[DaCe] Generating fast CPU code with vectorization](#dace-generating-fast-cpu-code-with-vectorization)
 
-#### [SLEEF in DaCe] Vectorization using SLEEF in DaCe
-* **Description**: Modern processors offer extensive vectorization options. Writing code that can successfully vectorized often involves additional development work targeted towards particular hardware, imposing significant portability and maintainability challenges. [SLEEF](https://github.com/shibatch/sleef) is a library that implements vectorized versions of standard C math functions, providing a simpler and more portable alternative. The goal of this project is to leverage SLEEF to provide efficient vectorization options within the [DaCe](https://spcldace.readthedocs.io/en/latest/) framework. 
-* **Expected outcome**: Implementing SLEEF library node expansions to allow DaCe  to take advantage of the vectorization opportunities that the SLEEF library offers.
+#### [DaCe] Generating Fast CPU Code with Vectorization
+* **Description**: Modern processors offer extensive vectorization options. Writing code in vectorized SIMD notation often involves additional development work targeted towards particular hardware, imposing significant portability and maintainability challenges. Vectorization libraries, such as [SLEEF](https://github.com/shibatch/sleef), [Highway](https://github.com/google/highway), [Vc](https://github.com/VcDevel/Vc), and others, implement vectorized versions of standard C operations and math functions, providing a simpler and more portable alternative. The goal of this project is to leverage one of those libraries to generate *fast* vectorized CPU code in the [DaCe](https://spcldace.readthedocs.io/en/latest/) framework. You will first choose a vectorization library and justify why it is the right choice. Then, you will ensure DaCe generates code that calls vectorized versions of operators (unary, binary, etc.) and math functions. Throughout the project, you will use [NPBench](https://github.com/spcl/npbench) to test the performance of the generated code on 52 scientific computing benchmarks. Successfully implementing a project like this might boost the performance of the benchmarks by 2-4x, with no changes to the original code!
+* **Expected outcome**: Implementing vectorized operations to allow DaCe to take advantage of SIMD instructions on new CPUs (and maybe GPUs...) that the chosen open source library offers.
 * **Skills required**: Python and C++. Basic experience with performance measurements and statistics is beneficial.
 * **Project size** - 350 hours (large).
 * **Difficulty** - Medium.
