@@ -119,16 +119,16 @@ At SPCL, we develop a programming framework that is geared towards optimizing th
 This intermediate program representation exposes where a program moves how much data and allos a programmer to interactively optimize the application by applying simple, pre-defined "transformations" from a library.
 DaCe comes with a Visual Studio Code extension that lets you interact with programs and optimize them. You can see a demonstration of this [here](https://github.com/spcl/dace-vscode).
 
-* [[DaCe-Debug] Retaining Semantic Source Information in Dataflow Representations](#dace-debug-retaining-semantic-source-information-in-dataflow-representations)
+* [[SLEEF in DaCe] Vectorization using SLEEF in DaCe](#sleef-in-dace-vectorization-using-sleef-in-dace)
 
-#### [DaCe-Debug] Retaining Semantic Source Information in Dataflow Representations
-- **Description**: High-performance programs can be represented as parametric graphs when using [Data-Centric Parallel Programming](https://github.com/spcl/dace). These graphs have a hierarchical structure, whereby control flow graphs are used to express control flow over parts of the application, and inside each basic block of a control flow graph a data flow graph represents the movement of data through an application. These graphs, also called SDFGs, can become very large and hard to read for bigger and more complex applications. Oftentimes an engineer may consequently prefer navigating the original source code, because they have additional meta information that tells them about a program’s behavior such as function or file names. This kind of information is naturally abstracted away in a representation such as SDFGs. In this project you will work on implementing named control flow groups or regions that can be used to carry over some of the information from source code representations into the SDFG representation. By annotating an SDFG with more source code information such as function or procedure names, an engineer can obtain more contextual clues while navigating a program’s data flow graph which can drastically help their optimization or problem solving efforts.
-- **Expected outcome**: Implementing named regions in the DaCe Dataflow representation that retain semantic source code information.
-- **Skills required**: Python, Javscript/Typescript, and a basic understanding of graph theory.
-- **Project Size**: Large (350 hours)
-- **Difficulty**: Difficult
-- **Mentor**: Philipp Schaad (philipp.schaad [at] inf.ethz [.] ch)
-- **Entry task**: Create a simple DaCe program through Python and run it.
+#### [SLEEF in DaCe] Vectorization using SLEEF in DaCe
+* **Description**: Modern processors offer extensive vectorization options. Writing code that can successfully vectorized often involves additional development work targeted towards particular hardware, imposing significant portability and maintainability challenges. [SLEEF](https://github.com/shibatch/sleef) is a library that implements vectorized versions of standard C math functions, providing a simpler and more portable alternative. The goal of this project is to leverage SLEEF to provide efficient vectorization options within the [DaCe](https://spcldace.readthedocs.io/en/latest/) framework. 
+* **Expected outcome**: Implementing SLEEF library node expansions to allow DaCe  to take advantage of the vectorization opportunities that the SLEEF library offers.
+* **Skills required**: Python and C++. Basic experience with performance measurements and statistics is beneficial.
+* **Project size** - 350 hours (large).
+* **Difficulty** - Medium.
+* **Mentor(s)**: Tal Ben-Nun (talbn [at] llnl [.] gov)
+* **Entry task**: Install and run the [NPBench](https://github.com/spcl/npbench) set of benchmarks and run them using DaCe.
 
 ### Project Template
 
