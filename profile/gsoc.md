@@ -1,5 +1,5 @@
 
-# Google Summer of Code (GSoC) 2024
+# Google Summer of Code (GSoC) 2025
 
 The SPCL group applied as an organization to the Google Summer of Code (GSoC) program
 for our open-source projects in data-centric programming and serverless computing.
@@ -8,7 +8,7 @@ each project to start using our software.
 
 Learn more on how to apply and write your proposal from the [contributor guideline](gsoc_application.md). You will also find there the proposal template. Get get in touch with mentors and discuss the project ideas using the provided email address and reach out to them on [our Mattermost server](https://chat.spcl.inf.ethz.ch/signup_user_complete/?id=6iq1jfforpf9tyhdmffi57zpxw) - join the public **Google Summer of Code*** channel.
 
-## Project Ideas
+## (Tentative) Project Ideas
 
 Our project ideas are grouped into two categories: [**serverless computing**](#serverless) and [**data-centric programming framework**](#data-centric-programming).
 
@@ -19,7 +19,8 @@ a new cloud paradigm concerned with writing stateless and _serverless_ functions
 Our benchmarking suite [SeBS](https://github.com/spcl/serverless-benchmarks) provides automatic build, deployment and invocations of representative serverless functions on several commercial and open-source FaaS platforms.
 We published and develop a serverless ZooKeeper implementation [FaaSKeeper](https://github.com/spcl/faaskeeper),
 a high-performance and RDMA-based serverless platform [rFaaS](https://github.com/spcl/rFaaS),
-and a serverless collectives library [FMI](https://github.com/spcl/FMI) for parallel and distributed applications.
+a serverless collectives library [FMI](https://github.com/spcl/FMI) for parallel and distributed applications,
+system for serverless processes [PraaS](https://github.com/spcl/PraaS), and GPU runtime for serverless [MIGnificient](https://github.com/spcl/MIGnificient).
 
 * [[SeBS] Website for experimental results](#sebs-website-for-experimental-results)
 * [[SeBS] Keeping up with clouds](#sebs-keeping-up-with-the-clouds)
