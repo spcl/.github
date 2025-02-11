@@ -122,6 +122,8 @@ DaCe comes with a Visual Studio Code extension that lets you interact with progr
 DaCe is used in a variety of applications, including weather and climate prediction models, quantum transport simulations, and fast machine learning operators.
 
 * [[DaCe] Generating fast CPU code with vectorization](#dace-generating-fast-cpu-code-with-vectorization)
+* [[DaCe] Fast Graph Backend For DaCe](#dace-fast-graph-backend)
+* [[DaCe] DaCe-ifying Fortran](#dace-dace-ifying-fortran)
 
 #### [DaCe] Generating Fast CPU Code with Vectorization
 * **Description**: Modern processors offer extensive vectorization options. Writing code in vectorized SIMD notation often involves additional development work targeted towards particular hardware, imposing significant portability and maintainability challenges. Vectorization libraries, such as [SLEEF](https://github.com/shibatch/sleef), [Highway](https://github.com/google/highway), [Vc](https://github.com/VcDevel/Vc), and others, implement vectorized versions of standard C operations and math functions, providing a simpler and more portable alternative. The goal of this project is to leverage one of those libraries to generate *fast* vectorized CPU code in the [DaCe](https://spcldace.readthedocs.io/en/latest/) framework. You will first choose a vectorization library and justify why it is the right choice. Then, you will ensure DaCe generates code that calls vectorized versions of operators (unary, binary, etc.) and math functions. Throughout the project, you will use [NPBench](https://github.com/spcl/npbench) to test the performance of the generated code on 52 scientific computing benchmarks. Successfully implementing a project like this might boost the performance of the benchmarks by 2-4x, with no changes to the original code!
@@ -130,6 +132,25 @@ DaCe is used in a variety of applications, including weather and climate predict
 * **Project size** - 350 hours (large).
 * **Difficulty** - Medium.
 * **Mentor(s)**: Tal Ben-Nun (talbn [at] llnl [.] gov)
+* **Entry task**: Install and run the [NPBench](https://github.com/spcl/npbench) set of benchmarks and run them using DaCe.
+
+
+#### [DaCe] Fast Graph Backend
+* **Description**: [DaCe](https://spcldace.readthedocs.io/en/latest/) is a Python framework built around the Stateful DataFlow multiGraphs ([SDFG](https://spcldace.readthedocs.io/en/latest/sdfg/ir.html)) intermediate representation (IR) to optimize computation. SDFG IR is a graph-based, dataflow-centric representation that simplifies dataflow analysis and decouples program optimization from code rewrites by utilizing graph isomorphisms. Optimizations are implemented via graph transformations, and the optimized SDFG is compiled to C++/CUDA or High-Level Synthesis (HLS) for CPUs, GPUs, and FPGAs. The DaCe framework is entirely written in Python and uses [Networkx](https://networkx.org/documentation/stable/index.html) as its graph backend. Using a pure Python implementation of a graph backend imposes a performance bottleneck for DaCe when transformations are applied to large SDFGs; optimizing a large graph from a 5k+ LOC Fortran application takes up to an hour. The goal of this project is to leverage existing graph libraries in C++ or Rust (such as the [Boost Graph Library](https://www.boost.org/doc/libs/1_82_0/libs/graph/doc/index.html) or [igraph](https://python.igraph.org/en/stable/)) to generate fast code *efficiently*. You will first choose a graph library and justify why it is the right choice. Then, you will ensure that existing SDFGs can be serialized and deserialized using the new graph backend and replace existing calls to Networkx with calls to the new graph backend to enable the migration from Networkx to more efficient solutions.
+* **Expected outcome**: A drop-in replacement for the graph manipulation functions in DaCe to use a graph library written in a compiled and fast language like C++ or Rust instead of Networkx.
+* **Skills required**: Python and one of the following languages: C++ or Rust. Basic experience in writing Python bindings (e.g., experience in using [Nanobind](https://github.com/wjakob/nanobind)) is beneficial.
+* **Project size** - 350 hours (large).
+* **Difficulty** - Medium.
+* **Mentor(s)**: Yakup Koray Budanaz (ybudanaz[at]inf.ethz.ch
+* **Entry task**: Create two graphs using Networkx and a C++ or Rust graph library and write a function that compares two graphs for equality that can be called from Python.
+
+#### [DaCe] DaCe-ifying Fortran
+* **Description**: In the last two years, we developed a new frontend for DaCe that can parse Fortran applications. This new feature allows us to provide dataflow optimizations for a huge body of scientific applications. In this project, we want to expand the current work by supporting more complex and exotic Fortran features to enable easy and straightforward integration of real-world and widely-used Fortran applications into DaCe.
+* **Expected outcome**: Expanding current Fortran frontend and validating it on selected popular Fortran benchmarks and scientific applications.
+* **Skills required**: Python. Knowing Fortran is not required, but basic experience (tutorials, small code samples) is beneficial.
+* **Project size** - 350 hours (large).
+* **Difficulty** - Medium.
+* **Mentor(s)**:  Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
 * **Entry task**: Install and run the [NPBench](https://github.com/spcl/npbench) set of benchmarks and run them using DaCe.
 
 ### Project Template
