@@ -25,8 +25,6 @@ a serverless collectives library [FMI](https://github.com/spcl/FMI) for parallel
 system for serverless processes [PraaS](https://github.com/spcl/PraaS), and GPU runtime for serverless [MIGnificient](https://github.com/spcl/MIGnificient).
 
 * [[SeBS] Website for experimental results](#sebs-website-for-experimental-results)
-* [[SeBS] Keeping up with clouds](#sebs-keeping-up-with-the-clouds)
-* [[SeBS] Supporting new serverless platforms](#sebs-supporting-new-serverless-platforms)
 * [[SeBS] Adding new serverless benchmarks](#sebs-new-serverless-benchmarks)
 * [[SeBS] Serverless Load Generators](#sebs-serverless-load-generators)
 * [[SeBS] Adding serverless applications as benchmarks](#sebs-benchmarking-serverless-applications)
