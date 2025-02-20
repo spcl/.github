@@ -32,6 +32,8 @@ system for serverless processes [PraaS](https://github.com/spcl/PraaS), and GPU 
 * [[SeBS] Adding serverless applications as benchmarks](#sebs-benchmarking-serverless-applications)
 * [[SeBS, MIGnificient] Serverless GPU Functions](#sebs-mignificient-serverless-gpu-functions)
 * [[rFaaS] Serverless MPI functions](#rfaas-serverless-mpi-functions)
+* [[PraaS] New inter-container runtime](#praas-new-inter-container-runtime)
+* [[PraaS, FMI] Serverless processes on functions](#praas-fmi-serverless-processes-on-functions)
 * [[FaaSKeeper] Using serverless ZooKeeper in Apache projects](#faaskeeper-using-serverless-zookeeper-in-apache-projects)
 
 #### [SeBS] Website for experimental results
@@ -58,7 +60,7 @@ system for serverless processes [PraaS](https://github.com/spcl/PraaS), and GPU 
 * **Skills required**: Python, Docker. Basic experience with cloud is expected (functions, object storage, databases). You should have basic experience with selected languages.
 * **Project size** - 175 hours (medium) or 350 hours (large), depending on the project scope (number of languages and benchmarks).
 * **Difficulty** - Easy/Medium.
-* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
+* **Mentor** - Marcin Chrapek (marcin.chrapek [at] inf.ethz [.] ch) or Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
 * **Entry task** - Contribute a PR to one of the issues marked as "good first issue".
 
 #### [SeBS] New serverless benchmarks
@@ -82,7 +84,7 @@ Do you have another idea for an interesting experiment? Let us know!
 
 #### [SeBS] Benchmarking serverless applications
 * **Description**: In SeBS, we focus on serverless functions and workflows. However, serverless is a rapidly changing field, and a new trend is building entire applications from serverless functions. These include, for example, using [various cloud triggers to compose functions](https://github.com/joe4dev/trigger-bench/) and porting [microservice benchmarks](https://github.com/delimitrou/DeathStarBench) to serverless. Users of SeBS would greatly benefit from being able to benchmark such complex applications and understand the performance bottlenecks of FaaS platforms. Based on existing open-source implementations, one should propose representative applications covering new, exciting use cases of serverless.
-* **Expected outcome**: Contributing to SeBS two-three benchmarks covering the open-source applications, with documentation, automatic invocation, and performance metrics. 
+* **Expected outcome**: Contributing to SeBS two or three benchmarks covering the open-source applications, with documentation, automatic invocation, and performance metrics. 
 * **Skills required**: Python, Docker, C++/Go. Basic experience with cloud storage, APIs and RPC will be necessary.
 * **Project size** - 350 hours (large).
 * **Difficulty** - Medium/Difficult.
@@ -95,7 +97,7 @@ Do you have another idea for an interesting experiment? Let us know!
 * **Skills required**: C/C++, experience with CUDA/OpenCL/SYCL will is benefitial.
 * **Project size** - 175 hours (medium) or 350 hours (large), depending on the scope of the project.
 * **Difficulty** - Medium.
-* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com).
+* **Mentor** - Marcin Chrapek (marcin.chrapek [at] inf.ethz [.] ch) or Marcin Copik (mcopik [at] gmail [.] com).
 * **Entry task** - Contribute a PR to one of the issues marked as "good first issue" in the MIGnificient project.
 
 #### [rFaaS] Serverless MPI functions
@@ -106,6 +108,24 @@ Do you have another idea for an interesting experiment? Let us know!
 * **Difficulty** - Difficult.
 * **Mentor** - Marcin Copik (mcopik [at] gmail [.] com).
 * **Entry task** - build rFaaS and test it with SoftRoCE.
+
+#### [PraaS] New inter-container runtime
+* **Description**: PraaS is a new runtime for serverless, [recently published at the ACM SoCC 2024 conference](https://mcopik.github.io/publications/#copik2024praas). There, we propose to run serverless processes instead of functions, which have a durable state and communication API. Our current container implementation works by forking multiple processes and communicating between POSIX message queues. However, this is far from ideal. First, we want to try Unix Domain Sockets and shared memory for communication. Second, we want to implement a second variant of container runtime that uses a multi-threaded executor for C++ to avoid any inter-process communication. We can also explore the idea of using shared memory for communication in Python, verifying if we can practically be used for complex Python applications.
+* **Expected outcome**: New container runtime for PraaS that overcomes performance limitations of the current solution.
+* **Skills required**: C++. Experience with low-level programming (shared memory) will be useful. For the last goal, very good Python knowledge is needed.
+* **Project size** - 350 hours (large).
+* **Difficulty** - Difficult.
+* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com, [mcopik @ GitHub](https://github.com/mcopik/)), Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
+* **Entry task** - Build PraaS and execute unit and integration tests.
+
+#### [PraaS, FMI] PraaS on functions
+* **Description**: PraaS is a new runtime for serverless, recently published at the ACM SoCC 2024 conference. There, we propose to run serverless processes instead of functions, which have a durable state and communication API. We deployed PraaS primarily on Docker containers on a remote server and on Fargate containers on AWS. However, we could achieve much better scalability if we execute PraaS processes on serverless functions. To that end, we need to replace the current communication API with the end that can work with the limitations of other serverless functions. A perfect candidate would be FMI, our system for serverless communication, which would only require a slightly different API to transition from MPI-style applications to distributed applications where processes enter and leave at anytime.
+* **Expected outcome**: Deployment of distributed PraaS application to serverless functions, with working communication and scaling.
+* **Skills required**: C++. Experience with clouds and networking will be useful.
+* **Project size** - 175 hours (medium) or 350 hours (large), depending on the scope of the project.
+* **Difficulty** - Medium/Difficult.
+* **Mentor** - Marcin Copik (mcopik [at] gmail [.] com, [mcopik @ GitHub](https://github.com/mcopik/)), Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
+* **Entry task** - Build PraaS and execute unit and integration tests.
 
 #### [FaaSKeeper] Using serverless ZooKeeper in Apache projects
 * **Description**: FaaSKeeper implements standard ZooKeeper functionalities and includes a new client for Python applications. ZooKeeper has been used by many Java and Scala applications in the Apache project, e.g., Kafka and HBase. Since they use a limited set of features that might be covered by FaaSKeeper, demonstrating the integration of our function-based implementation would be a significant improvement to the project. Last year, we implemented a new Java client for ZooKeeper that offloads ZooKeeper calls to the REST cloud API instead of using ZooKeeper protocol and demonstrated an integration for simple operations in HBase. The goal of the project is to continue the work: expand the capabilities of the client library, run HBase benchmarks, optimize FaaSKeeper's deployment, and identify other relevant project(s) that could use FaaSKeeper instead of ZooKeeper.
