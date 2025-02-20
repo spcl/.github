@@ -28,7 +28,7 @@ system for serverless processes [PraaS](https://github.com/spcl/PraaS), and GPU 
 * [[SeBS] Keeping up with the clouds](#sebs-keeping-up-with-the-clouds)
 * [[SeBS] Polyglot SeBS](#sebs-polyglot-sebs)
 * [[SeBS] Adding new serverless benchmarks](#sebs-new-serverless-benchmarks)
-* [[SeBS] Serverless Load Generators](#sebs-serverless-load-generators)
+* [[SeBS] Serverless Load Generators and Experiments](#sebs-serverless-load-generators-and-experiments)
 * [[SeBS] Adding serverless applications as benchmarks](#sebs-benchmarking-serverless-applications)
 * [[SeBS, MIGnificient] Serverless GPU Functions](#sebs-mignificient-serverless-gpu-functions)
 * [[rFaaS] Serverless MPI functions](#rfaas-serverless-mpi-functions)
@@ -55,7 +55,7 @@ system for serverless processes [PraaS](https://github.com/spcl/PraaS), and GPU 
 * Entry task - Contribute a PR to one of the issues marked as "good first issue".
 
 #### [SeBS] Polyglot SeBS
-* **Description**: In SeBS, we focused on benchmarks in Python and JavaScript, and we are working on supporting C++ and Java. However, the space of popular languages in serverless is much broader - Go, .NET, Rust - and only a few benchmarks are implemented in C++ and Node.js (see the [issue 235](https://github.com/spcl/serverless-benchmarks/issues/235). Furthermore, there are new and exciting runtimes that are not available in the cloud, like LLRT/Bun for JavaScript, which have much faster bootup times, and PyPy for Python, which has JIT support (see the [issue 235](https://github.com/spcl/serverless-benchmarks/issues/236). Supporting them would significantly increase the scope of performance measurements obtained with SeBS.
+* **Description**: In SeBS, we focused on benchmarks in Python and JavaScript, and we are working on supporting C++ and Java. However, the space of popular languages in serverless is much broader - Go, .NET, Rust - and only a few benchmarks are implemented in C++ and Node.js (see the [issue 235](https://github.com/spcl/serverless-benchmarks/issues/235)). Furthermore, there are new and exciting runtimes that are not available in the cloud, like LLRT/Bun for JavaScript, which have much faster bootup times, and PyPy for Python, which has JIT support (see the [issue 235](https://github.com/spcl/serverless-benchmarks/issues/236)). Supporting them would significantly increase the scope of performance measurements obtained with SeBS.
 * **Expected outcome**: Contributing to SeBS's support for new programming languages, at least with a microbenchmark and simple warm/cold start experiments.
 * **Skills required**: Python, Docker. Basic experience with cloud is expected (functions, object storage, databases). You should have basic experience with selected languages.
 * **Project size** - 175 hours (medium) or 350 hours (large), depending on the project scope (number of languages and benchmarks).
@@ -72,12 +72,12 @@ system for serverless processes [PraaS](https://github.com/spcl/PraaS), and GPU 
 * **Mentor** - Marcin Copik (mcopik [at] gmail [.] com), [mcopik @ GitHub](https://github.com/mcopik/)
 * **Entry task** - Contribute a PR to one of the issues marked as "good first issue".
  
-#### [SeBS] Serverless Load Generators
-* **Description**: SeBS includes automatic experiments that evaluate specific performance features of serverless platforms, such as latency and cost of function invocations or invocation overheads. The goal of the project would be to add new experiments that focus on scalability, throughput, and elasticity, with a particular focus on a configurable generator for variable workloads. We want to examine existing workload generators, like FaaSRail, and integrate them into SeBS, or develop our custom solution based on JMeter or a similar system.
-Do you have another idea for an interesting experiment? Let us know!
+#### [SeBS] Serverless Load Generators and Experiments
+* **Description**: SeBS includes automatic experiments that evaluate specific performance features of serverless platforms, such as latency and cost of function invocations or invocation overheads.
+The goal of the project would be to add new experiments that use microbenchmarks and serverless functions to evaluate interesting metrics and characteristics of a serverless runtime. An example would be a flexible and configurable workload generator, based on JMeter or a similar system, to measure throughput, scalability, and the elasticity of the platform when varying workloads - with a particular focus on a configurable generator for variable workloads, like FaaSRail (see the [issue 238](https://github.com/spcl/serverless-benchmarks/issues/238)). Another goal would be to extend existing trigger types with storage and queues to understand the latency and throughput of synchronous and asynchronous invocations and measure the latency of pipeline invocations (see the [issue 239](https://github.com/spcl/serverless-benchmarks/issues/239)). Do you have another idea for an interesting experiment? Let us know!
 * **Expected outcome**: Contributing to SeBS complete, end-to-end performance experiments.
 * **Skills required**: Python. Basic experience with performance measurements and statistics is expected.
-* **Project size** - 90 hours (small) or 175 hours (medium), depending on the project scope (number and scope of experiments).
+* **Project size** - 175 hours (medium) or 350 hours (large), depending on the project scope (number and scope of experiments).
 * **Difficulty** - Medium/Difficult.
 * **Mentor** - Marcin Copik (mcopik [at] gmail [.] com, [mcopik @ GitHub](https://github.com/mcopik/)), Alexandru Calotoiu (alexandru.calotoiu [at] inf.ethz [.] ch)
 * **Entry task** - Contribute a PR to one of the issues marked as "good first issue".
